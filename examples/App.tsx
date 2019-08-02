@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import Icon, { IconProps } from '@ccb/vector-icons'
+import Icon, { IconProps } from '@churchcommunitybuilder/vector-icons'
 
 function IconDemo({ name, ...props }: IconProps) {
   return (
