@@ -8,3 +8,8 @@ To override any default props, ensure that you add your props after the `{...pro
 To run them on device, `yarn examples`
 To run them on web, `yarn examples:web`
 To publish examples app to expo, `yarn examples:publish`
+
+# PRs and Creating releases
+
+All changes must be PRs
+To publish to npm, update version w/semver and `yarn publish`

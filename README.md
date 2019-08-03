@@ -5,3 +5,7 @@ This library contains common svg icons used across church community builder proj
 # Installation
 
 `yarn add @churchcommunitybuilder/vector-icons`
+
+# Contributing
+
+Check out the [Contributing Guide](/CONTRIBUTING.md) for how to get started.
