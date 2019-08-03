@@ -11,5 +11,6 @@ To publish examples app to expo, `yarn examples:publish`
 
 # PRs and Creating releases
 
-All changes must be PRs
-To publish to npm, update version w/semver and `yarn publish`
+All changes must go through the PR process.
+
+To publish to npm, update version w/semver and `yarn publish`.
