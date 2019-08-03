@@ -15,9 +15,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "publishExamples": "cd examples && expo p",
-    "build": "rm -rf dist && tsc -p tsconfig.json",
     "examples": "cd examples && yarn && yarn start",
+    "examples:web": "cd examples && yarn && yarn web",
+    "examples:publish": "cd examples && expo p",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
     "prepublish": "yarn build"
   },
   "dependencies": {

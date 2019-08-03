@@ -839,17 +839,8 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@ccb/vector-icons@file:..":
+"@churchcommunitybuilder/vector-icons@file:../..":
   version "0.0.1"
-  dependencies:
-    react "^16.8.6"
-    react-native "^0.60.4"
-    react-native-svg "^9.5.3"
-
-"@churchcommunitybuilder/vector-icons@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@churchcommunitybuilder/vector-icons/-/vector-icons-0.0.1.tgz#3288b46879cbf36417a57cbf650b8662577ebaf3"
-  integrity sha512-UxSdj8aa9HEaguXeiY4IAov59qwHWbMIw1KoEH5p61WgZJAos/GTcAWJ0yXDIKpTL8wi/teG6BXrmNZGJxKgew==
   dependencies:
     react "^16.8.6"
     react-native "^0.60.4"

@@ -1,38 +1,30 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import Icon, { IconProps } from '@churchcommunitybuilder/vector-icons'
-
-function IconDemo({ name, ...props }: IconProps) {
-  return (
-    <View style={styles.iconDemo}>
-      <View style={styles.iconDemoText}>
-        <Text>{name}</Text>
-      </View>
-      <View style={styles.iconDemoSpacer} />
-      <View style={styles.iconDemoIcon}>
-        <Icon name={name} {...props} />
-      </View>
-    </View>
-  )
-}
+import Icon, { IconName } from '@churchcommunitybuilder/vector-icons'
+import * as Icons from '@churchcommunitybuilder/vector-icons/dist/icons'
 
 export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <IconDemo name="Add" />
-      <IconDemo name="BackCircle" />
-      <IconDemo name="Check" />
-      <IconDemo name="CloseCircle" />
-      <IconDemo name="Location" />
-      <IconDemo name="Search" />
+      {Object.keys(Icons).map((icon: IconName) => (
+          <View key={icon} style={styles.iconDemo}>
+            <View style={styles.iconDemoText}>
+              <Text>{icon}</Text>
+            </View>
+            <View style={styles.iconDemoSpacer} />
+            <View style={styles.iconDemoIcon}>
+              <Icon name={icon} />
+            </View>
+          </View>
+        )
+      )}
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   iconDemo: {
-    flex: 0,
     flexDirection: 'row',
     paddingVertical: 16,
     borderBottomColor: 'rgba(55, 64, 70, 0.2)',
