@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import Icon, { IconName } from '@churchcommunitybuilder/vector-icons'
-import * as Icons from '@churchcommunitybuilder/vector-icons/dist/icons'
+import Icon, { IconName } from './src'
+import * as Icons from './src/icons'
 
 export default function App() {
   return (

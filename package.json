@@ -2,32 +2,36 @@
   "name": "@churchcommunitybuilder/vector-icons",
   "version": "0.0.1",
   "description": "Vector Icons",
-  "main": "dist/index.js",
   "repository": "https://github.com/churchcommunitybuilder/vector-icons.git",
   "author": "Alex Beckwith <alfonz129@gmail.com>",
   "license": "MIT",
   "private": false,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "build": "rm -rf dist && yarn tsc -p tsconfig.build.json",
+    "prepare": "yarn build"
+  },
+  "files": [
+    "/dist/**/*",
+    "/package.json",
+    "LICENSE"
+  ],
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist/**/*",
-    "LICENSE"
-  ],
-  "scripts": {
-    "examples": "cd examples && yarn && yarn start",
-    "examples:web": "cd examples && yarn && yarn web",
-    "examples:publish": "cd examples && expo p",
-    "build": "rm -rf dist && tsc -p tsconfig.json",
-    "prepublish": "yarn build"
-  },
   "dependencies": {
-    "react": "^16.8.6",
-    "react-native": "^0.60.4",
+    "react": "16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-svg": "^9.5.3"
   },
   "devDependencies": {
-    "@types/react": "^16.8.24",
-    "typescript": "^3.5.3"
+    "@types/react": "^16.8.23",
+    "@types/react-native": "^0.57.65",
+    "babel-preset-expo": "^6.0.0",
+    "expo": "^34.0.1",
+    "react-dom": "^16.8.6",
+    "react-native-web": "^0.11.4",
+    "typescript": "^3.4.5"
   }
 }
