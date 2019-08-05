@@ -9,8 +9,9 @@
   "main": "index.js",
   "scripts": {
     "start": "expo start",
+    "format": "yarn prettier src/**/*.{ts,tsx}",
     "build": "rm -rf dist && yarn tsc -p tsconfig.build.json",
-    "prepare": "yarn build"
+    "prepublishOnly": "yarn build"
   },
   "files": [
     "/dist/**/*",
@@ -30,6 +31,7 @@
     "@types/react-native": "^0.57.65",
     "babel-preset-expo": "^6.0.0",
     "expo": "^34.0.1",
+    "prettier": "^1.18.2",
     "react-dom": "^16.8.6",
     "react-native-web": "^0.11.4",
     "typescript": "^3.4.5"
