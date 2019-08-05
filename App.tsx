@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import Icon, { IconName } from './src'
+import Icon, { IconName } from './src/Icon'
 import * as Icons from './src/icons'
 
 export default function App() {
