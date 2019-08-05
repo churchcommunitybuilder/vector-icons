@@ -15,6 +15,7 @@
   },
   "files": [
     "/dist/**/*",
+    "/index.js",
     "/package.json",
     "LICENSE"
   ],
@@ -23,7 +24,6 @@
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-svg": "^9.5.3"
   },
   "devDependencies": {
@@ -33,6 +33,7 @@
     "expo": "^34.0.1",
     "prettier": "^1.18.2",
     "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-web": "^0.11.4",
     "typescript": "^3.4.5"
   }
