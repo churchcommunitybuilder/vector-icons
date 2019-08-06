@@ -1,13 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native';
 
 import Icon, { IconName } from './src/Icon'
 import * as Icons from './src/icons'
 
 export default function App() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      {Object.keys(Icons).map((icon: IconName) => (
+    <SafeAreaView style={styles.screen}>
+      <ScrollView>
+        {Object.keys(Icons).map((icon: IconName) => (
           <View key={icon} style={styles.iconDemo}>
             <View style={styles.iconDemoText}>
               <Text>{icon}</Text>
@@ -17,10 +18,10 @@ export default function App() {
               <Icon name={icon} />
             </View>
           </View>
-        )
-      )}
-    </ScrollView>
-  );
+        ))}
+      </ScrollView>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -43,10 +44,5 @@ const styles = StyleSheet.create({
   iconDemoSpacer: {
     width: 16,
   },
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  screen: { flex: 1 },
 });
