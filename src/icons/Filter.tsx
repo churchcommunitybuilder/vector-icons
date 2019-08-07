@@ -2,8 +2,8 @@ import React from 'react';
 import Svg, { Path, SvgProps } from 'react-native-svg';
 
 const Filter: React.FC<SvgProps> = props => (
-  <Svg {...props} viewBox="0 0 32 32">
-    <Path d="M13.333 24h5.333v-2.667h-5.333V24zM4 8v2.667h24V8H4zm4 9.333h16v-2.667H8v2.667z" />
+  <Svg {...props}>
+    <Path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
   </Svg>
 );
 
