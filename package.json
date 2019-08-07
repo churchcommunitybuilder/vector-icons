@@ -1,39 +1,23 @@
 {
-  "name": "@churchcommunitybuilder/vector-icons",
-  "version": "0.0.2",
-  "description": "Vector Icons",
-  "repository": "https://github.com/churchcommunitybuilder/vector-icons.git",
-  "author": "Alex Beckwith <alfonz129@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "main": "index.js",
+  "main": "./node_modules/expo/AppEntry",
   "scripts": {
     "start": "expo start",
-    "format": "yarn prettier src/**/*.{ts,tsx}",
-    "build": "rm -rf dist && yarn tsc -p tsconfig.build.json",
-    "prepublishOnly": "yarn build"
-  },
-  "files": [
-    "/dist/**/*",
-    "/package.json",
-    "LICENSE"
-  ],
-  "publishConfig": {
-    "access": "public"
+    "build": "cd src && yarn build",
+    "publish": "cd src && yarn publish",
+    "mk": "node makeIcon.js"
   },
   "dependencies": {
     "react": "16.8.6",
+    "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
-    "react-native-svg": "^9.5.3"
+    "react-native-web": "^0.11.4"
   },
   "devDependencies": {
     "@types/react": "^16.8.23",
     "@types/react-native": "^0.57.65",
     "babel-preset-expo": "^6.0.0",
+    "commander": "^2.20.0",
     "expo": "^34.0.1",
-    "prettier": "^1.18.2",
-    "react-dom": "^16.8.6",
-    "react-native-web": "^0.11.4",
     "typescript": "^3.4.5"
   }
 }

@@ -1,12 +1,12 @@
-import React from 'react'
-import { SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native'
+import React from 'react';
+import { SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native';
 
-import Icon, { IconName } from './src'
+import Icon, { IconName } from './src/Icon'
 import * as Icons from './src/icons'
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.screen}>
       <ScrollView>
         {Object.keys(Icons).map((icon: IconName) => (
           <View key={icon} style={styles.iconDemo}>
@@ -47,4 +47,5 @@ const styles = StyleSheet.create({
   iconDemoSpacer: {
     width: 16,
   },
-})
+  screen: { flex: 1 },
+});
