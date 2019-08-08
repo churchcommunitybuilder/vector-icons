@@ -24,8 +24,10 @@ const Icon: React.FC<IconProps> = ({
 
 Icon.defaultProps = {
   fill: 'rgba(0, 0, 0, 0.54)',
-  viewBox: '0 0 24 24',
   height: 24,
+  stroke: undefined,
+  strokeWidth: 1,
+  viewBox: '0 0 24 24',
   width: 24,
 }
 
