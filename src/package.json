@@ -6,7 +6,7 @@
   "author": "Alex Beckwith <alfonz129@gmail.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist",
+  "main": "dist/index.js",
   "scripts": {
     "format": "yarn prettier src/**/*.{ts,tsx}",
     "build": "rm -rf dist && yarn tsc -p tsconfig.json",
