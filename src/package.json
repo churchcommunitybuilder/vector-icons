@@ -20,11 +20,13 @@
     "access": "public"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native-svg": "^9.5.3"
+    "react": "16.8.6"
   },
   "devDependencies": {
     "prettier": "^1.18.2",
     "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "react-native-svg": "^9.5.1"
   }
 }
