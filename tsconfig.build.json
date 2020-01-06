@@ -8,6 +8,7 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "pretty": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "target": "es5",
     "lib": ["esnext"],
