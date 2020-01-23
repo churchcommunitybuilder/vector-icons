@@ -19,11 +19,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "react": "16.9.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^1.19.1",
+    "react": "16.9.0",
     "typescript": "^3.7.4"
   },
   "peerDependencies": {

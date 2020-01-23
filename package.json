@@ -6,19 +6,18 @@
     "publish": "cd src && yarn publish",
     "mk": "node makeIcon.js"
   },
-  "dependencies": {
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
-    "react-native-svg": "9.13.3",
-    "react-native-web": "^0.11.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.9.0",
     "@types/react-native": "^0.60.15",
     "babel-preset-expo": "^8.0.0",
     "commander": "^2.20.0",
     "expo": "^36.0.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
+    "react-native-svg": "9.13.3",
+    "react-native-web": "^0.11.7",
     "typescript": "^3.7.2"
   }
 }
