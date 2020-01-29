@@ -7,9 +7,7 @@ To override any default props, ensure that you add your props after the `{...pro
 
 # Running examples
 
-To run them on device, `yarn examples`
-To run them on web, `yarn examples:web`
-To publish examples app to expo, `yarn examples:publish`
+To run them on device, `yarn start`
 
 # PRs and Creating releases
 

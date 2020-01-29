@@ -4,7 +4,7 @@ import { SafeAreaView, StyleSheet, Text, ScrollView, View } from 'react-native';
 import Icon, { IconName } from './src/Icon'
 import * as Icons from './src/icons'
 
-export default function App() {
+const App = () => {
   return (
     <SafeAreaView style={styles.screen}>
       <ScrollView>
@@ -22,7 +22,9 @@ export default function App() {
       </ScrollView>
     </SafeAreaView>
   )
-}
+};
+
+export default React.memo(App);
 
 const styles = StyleSheet.create({
   container: {

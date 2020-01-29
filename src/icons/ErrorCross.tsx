@@ -1,28 +1,9 @@
 import * as React from 'react'
 import Svg, { Circle, Path, SvgProps } from 'react-native-svg'
 
-const ErrorCross: React.FC<SvgProps> = ({fill, strokeWidth, ...props}) => (
-  <Svg {...props}>
-    <Path
-      strokeWidth={strokeWidth}
-      stroke={fill}
-      fill="none"
-      d="M6.323 5.747l11.944 12.648M5.667 17.963L18.315 6.02"
-    />
-    <Circle
-      stroke={fill}
-      r={11.443}
-      cy={12.016}
-      cx={12.03}
-      strokeWidth={strokeWidth}
-      fill="none"
-    />
-    <Path
-      strokeWidth={strokeWidth}
-      stroke={fill}
-      fill="none"
-      d="M4.434 11.863h.032M6.509 6.509L17.49 17.49M17.491 6.509L6.51 17.49"
-    />
+const ErrorCross: React.FC<SvgProps> = ({fill, ...props}) => (
+  <Svg {...props} viewBox="0 0 80 80">
+    <Path fill={fill} d="M40 76c19.882 0 36-16.118 36-36S59.882 4 40 4 4 20.118 4 40s16.118 36 36 36zm0-76c22.091 0 40 17.909 40 40 0 21.87-17.552 39.641-39.339 39.995L40 80C17.909 80 0 62.091 0 40S17.909 0 40 0zm14.411 23L40.119 37.29 25.831 23.002l-2.833 2.825 14.293 14.292L23 54.41l2.825 2.833L40.12 42.948l14.294 14.293 2.828-2.828-14.293-14.294 14.291-14.29L54.411 23z" />
   </Svg>
 )
 
