@@ -1,23 +1,23 @@
 {
   "name": "@churchcommunitybuilder/vector-icons",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Vector Icons",
-  "repository": "https://github.com/churchcommunitybuilder/vector-icons.git",
   "author": "Alex Beckwith <alfonz129@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "main": "dist/index.js",
+  "repository": "github:churchcommunitybuilder/vector-icons",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "private": true,
+    "main": "dist/index.js",
+    "files": [
+      "/dist/**/*"
+    ]
+  },
   "scripts": {
     "format": "yarn prettier src/**/*.{ts,tsx}",
     "build": "rm -rf dist && yarn tsc -p tsconfig.json",
     "prepublishOnly": "yarn build",
     "postpublish": "cd .. && yarn expo p"
-  },
-  "files": [
-    "/dist/**/*"
-  ],
-  "publishConfig": {
-    "access": "public"
   },
   "dependencies": {},
   "devDependencies": {
@@ -26,6 +26,6 @@
     "typescript": "^3.7.4"
   },
   "peerDependencies": {
-    "react-native-svg": "^9.5.1"
+    "react-native-svg": ">=9"
   }
 }
