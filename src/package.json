@@ -5,13 +5,12 @@
   "author": "Alex Beckwith <alfonz129@gmail.com>",
   "license": "MIT",
   "repository": "github:churchcommunitybuilder/vector-icons",
+  "main": "dist/index.js",
+  "files": [
+    "/dist/**/*"
+  ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
-    "private": true,
-    "main": "dist/index.js",
-    "files": [
-      "/dist/**/*"
-    ]
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "format": "yarn prettier src/**/*.{ts,tsx}",
