@@ -3,23 +3,23 @@
   "scripts": {
     "start": "expo start",
     "build": "cd src && yarn build",
-    "publish": "cd src && yarn publish",
+    "p": "cd src && yarn publish",
     "mk": "node makeIcon.js",
     "postinstall": "cd src && yarn"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@types/react": "^16.9.0",
-    "@types/react-native": "^0.60.15",
-    "babel-preset-expo": "^8.0.0",
+    "@babel/core": "^7.9.0",
+    "@types/react": "^16.9.11",
+    "@types/react-native": "^0.60.22",
+    "babel-preset-expo": "^8.1.0",
     "commander": "^2.20.0",
-    "expo": "^36.0.0",
+    "expo": "^37.0.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.1.tar.gz",
-    "react-native-svg": "9.13.3",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.0.tar.gz",
+    "react-native-svg": "11.0.1",
     "react-native-web": "^0.11.7",
-    "typescript": "^3.7.2"
+    "typescript": "^3.8.3"
   }
 }
