@@ -4,7 +4,8 @@
     "start": "expo start",
     "build": "cd src && yarn build",
     "publish": "cd src && yarn publish",
-    "mk": "node makeIcon.js"
+    "mk": "node makeIcon.js",
+    "postinstall": "cd src && yarn"
   },
   "dependencies": {},
   "devDependencies": {
