@@ -3,34 +3,52 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
-  ScrollView,
   View,
   SectionList,
+  TouchableOpacity,
+  Animated,
 } from 'react-native'
 
 import Icon from './src/Icon'
 import * as Icons from './src/icons'
 
 function IconRow({ item: icon }) {
+  const [on, setOn] = React.useState(false)
+  const bgColor = React.useMemo(() => new Animated.Value(0), [])
+
+  const onAnimate = React.useCallback(() => {
+    setOn(!on)
+    Animated.timing(bgColor, {
+      toValue: on ? 0 : 1,
+      duration: 350,
+      useNativeDriver: true,
+    }).start()
+  }, [on, bgColor])
+
+  const fill = bgColor.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['rgb(0, 0, 0)', 'rgb(250, 0, 0)'],
+    extrapolate: 'clamp',
+  })
+
   return (
     <View key={icon} style={styles.iconDemo}>
+      <TouchableOpacity onPress={onAnimate}>
+        <Text>Animate</Text>
+      </TouchableOpacity>
       <View style={styles.iconDemoText}>
         <Text>{icon}</Text>
       </View>
       <View style={styles.iconDemoSpacer} />
       <View style={styles.iconDemoIcon}>
-        <Icon name={icon} />
+        <Icon name={icon} fill={fill} />
       </View>
     </View>
   )
 }
 
 function IconSectionHeader({ section }) {
-  return (
-      <Text style={styles.iconText}>
-        {section.title}
-      </Text>
-  )
+  return <Text style={styles.iconText}>{section.title}</Text>
 }
 
 const data = Object.values(
@@ -47,14 +65,15 @@ const data = Object.values(
   }, {}),
 )
 
-const keyExtractor = i => i
+const keyExtractor = (i) => i
 const App = () => {
+  const [] = React.useState(false)
   return (
     <SafeAreaView style={styles.screen}>
       <SectionList
         sections={data as any}
         renderSectionHeader={IconSectionHeader}
-        renderItem={IconRow}
+        renderItem={(props) => <IconRow {...props} />}
         keyExtractor={keyExtractor}
       />
     </SafeAreaView>
