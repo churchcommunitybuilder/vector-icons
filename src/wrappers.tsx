@@ -15,7 +15,7 @@ const wrapAnimatedComponent = (OriginalComponent: any) => {
 }
 
 export interface SvgProps extends Omit<RNSvgProps, 'fill'> {
-  fill: RNSvgProps['fill'] | Animated.AnimatedInterpolation
+  fill?: RNSvgProps['fill'] | Animated.AnimatedInterpolation
 }
 
 export { default as Svg, G } from 'react-native-svg'

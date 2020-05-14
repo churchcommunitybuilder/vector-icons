@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   iconDemoSpacer: {
     width: 16,
   },
-  screen: { flex: 1 },
+  screen: { flex: 1, alignContent: 'center', justifyContent: 'center' },
   iconText: {
     fontWeight: 'bold',
     fontSize: 16,

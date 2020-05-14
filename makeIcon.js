@@ -29,9 +29,10 @@ try {
 
 const iconFile = `
 import * as React from 'react'
-import Svg, { SvgProps } from 'react-native-svg'
 
-const ${iconName}: React.FC<SvgProps> = props => (
+import { Svg, SvgProps } from '../wrappers'
+
+const ${iconName}: React.FC<SvgProps> = ({ fill, ...props }) => (
   <Svg {...props}>
   </Svg>
 )
