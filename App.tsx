@@ -7,6 +7,7 @@ import {
   SectionList,
   TouchableOpacity,
   Animated,
+  TextInput,
 } from 'react-native'
 
 import Icon from './src/Icon'
@@ -32,10 +33,7 @@ function IconRow({ item: icon }) {
   })
 
   return (
-    <View key={icon} style={styles.iconDemo}>
-      <TouchableOpacity onPress={onAnimate}>
-        <Text>Animate</Text>
-      </TouchableOpacity>
+    <TouchableOpacity key={icon} style={styles.iconDemo} onPress={onAnimate}>
       <View style={styles.iconDemoText}>
         <Text>{icon}</Text>
       </View>
@@ -43,7 +41,7 @@ function IconRow({ item: icon }) {
       <View style={styles.iconDemoIcon}>
         <Icon name={icon} fill={fill} />
       </View>
-    </View>
+    </TouchableOpacity>
   )
 }
 
@@ -51,25 +49,41 @@ function IconSectionHeader({ section }) {
   return <Text style={styles.iconText}>{section.title}</Text>
 }
 
-const data = Object.values(
-  Object.keys(Icons).reduce((acc, icon) => {
-    const letter = icon.charAt(0)
-
-    return {
-      ...acc,
-      [letter]: {
-        title: letter,
-        data: [...(acc?.[letter]?.data ?? []), icon],
-      },
-    }
-  }, {}),
-)
-
 const keyExtractor = (i) => i
+
 const App = () => {
-  const [] = React.useState(false)
+  const [search, setSearch] = React.useState('')
+
+  const data = React.useMemo(() => {
+    const searchExpresssion = RegExp(search.toLowerCase(), 'i')
+
+    return Object.values(
+      Object.keys(Icons).reduce((acc, icon) => {
+        if (search.length && !searchExpresssion.test(icon)) {
+          return acc
+        }
+
+        const letter = icon.charAt(0)
+
+        return {
+          ...acc,
+          [letter]: {
+            title: letter,
+            data: [...(acc?.[letter]?.data ?? []), icon],
+          },
+        }
+      }, {}),
+    )
+  }, [search])
+
   return (
     <SafeAreaView style={styles.screen}>
+      <TextInput
+        style={styles.textInput}
+        value={search}
+        onChangeText={setSearch}
+        placeholder="Search..."
+      />
       <SectionList
         sections={data as any}
         renderSectionHeader={IconSectionHeader}
@@ -113,5 +127,14 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     width: '100%',
     textAlign: 'center',
+  },
+  textInput: {
+    fontSize: 16,
+    color: 'black',
+    margin: 8,
+    padding: 8,
+    borderColor: 'rgba(55, 64, 70, 0.2)',
+    borderRadius: 4,
+    borderWidth: 1,
   },
 })
