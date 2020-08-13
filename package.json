@@ -2,6 +2,7 @@
   "main": "./node_modules/expo/AppEntry",
   "scripts": {
     "start": "expo start",
+    "ri": "expo start --ios",
     "build": "cd src && yarn build",
     "p": "cd src && yarn publish",
     "mk": "node makeIcon.js",
