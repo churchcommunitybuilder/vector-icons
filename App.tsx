@@ -39,7 +39,9 @@ function IconRow({ item: icon }) {
       </View>
       <View style={styles.iconDemoSpacer} />
       <View style={styles.iconDemoIcon}>
-        <Icon name={icon} fill={fill} />
+        <View style={styles.iconDemoContainer}>
+          <Icon name={icon} fill={fill} />
+        </View>
       </View>
     </TouchableOpacity>
   )
@@ -104,6 +106,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: 16,
     borderBottomColor: 'rgba(55, 64, 70, 0.2)',
+    backgroundColor: '#f7f7f8',
     width: '100%',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
@@ -115,6 +118,13 @@ const styles = StyleSheet.create({
   iconDemoIcon: {
     flex: 0.5,
     justifyContent: 'center',
+  },
+  iconDemoContainer: {
+    alignSelf: 'flex-start',
+    backgroundColor: 'white',
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: '#e6e6e6',
   },
   iconDemoSpacer: {
     width: 16,
