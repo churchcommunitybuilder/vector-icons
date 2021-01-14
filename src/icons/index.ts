@@ -1,5 +1,6 @@
 export { default as Add } from './Add'
 export { default as AddCircle } from './AddCircle'
+export { default as AddCircleFilled } from './AddCircleFilled'
 export { default as Advanced } from './Advanced'
 export { default as Api } from './Api'
 export { default as ArrowDown } from './ArrowDown'
