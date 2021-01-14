@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Svg, { Circle, Polygon, SvgProps } from 'react-native-svg'
+import { Svg, Circle, Polygon, SvgProps } from '../wrappers'
 
-const Close: React.FC<SvgProps> = props => (
+const Close: React.FC<SvgProps> = ({ fill, ...props }) => (
   <Svg {...props} viewBox="0 0 32 32">
     <Circle fill="#f8f9fa" cx="16" cy="16" r="16" />
     <Polygon

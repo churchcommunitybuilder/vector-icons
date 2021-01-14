@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { SvgProps } from 'react-native-svg';
 
 import * as Icons from './icons'
+import { SvgProps } from './wrappers'
 
 export type IconName = keyof typeof Icons
 
@@ -9,10 +9,7 @@ export interface IconProps extends SvgProps {
   name: IconName
 }
 
-const Icon: React.FC<IconProps> = ({
-  name,
-  ...props
-}) => {
+const Icon: React.FC<IconProps> = ({ name, ...props }) => {
   const IconComponent = Icons[name]
 
   if (!IconComponent) {

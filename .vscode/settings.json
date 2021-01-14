@@ -1,11 +1,10 @@
 {
   "typescript.preferences.renameShorthandProperties": false,
   "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true
-  },
-  "[typescript]": {
-    "editor.formatOnSave": true,
+    "source.fixAll.eslint": true
   },
   "search.exclude": {
     "**/node_modules": true,

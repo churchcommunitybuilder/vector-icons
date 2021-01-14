@@ -1,11 +1,10 @@
 import * as React from 'react'
-import Svg, { Polygon, SvgProps } from 'react-native-svg'
+import { Svg, Polygon, SvgProps } from '../wrappers'
 
-const ArrowDropup: React.FC<SvgProps> = props => (
+const TriangleUp: React.FC<SvgProps> = ({ fill, ...props }) => (
   <Svg {...props}>
-    <Polygon points="7 14 12 9 17 14" />
+    <Polygon fill={fill} points="7 14 12 9 17 14" />
   </Svg>
 )
 
-export default React.memo(ArrowDropup)
-
+export default React.memo(TriangleUp)
