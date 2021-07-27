@@ -1,13 +1,9 @@
 {
-  "typescript.preferences.renameShorthandProperties": false,
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
   "eslint.codeActionsOnSave.mode": "all",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "search.exclude": {
-    "**/node_modules": true,
-  },
-  "git.ignoreLimitWarning": true,
 }
